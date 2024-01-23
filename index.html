@@ -26,16 +26,16 @@
 
     <script>
         tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                clifford: '#da373d',
-                'hockey-primary': '#FF4240',
-              }
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'hockey-primary': '#FF4240',
+                    }
+                }
             }
-          }
         }
-      </script>
+    </script>
 
     <!-- Styles -->
 
@@ -46,8 +46,9 @@
     </style>
 </head>
 
-<body class="container mx-auto">
+<body class="px-32">
     <header>
+        <!-- Navbar -->
         <nav>
             <div class="navbar bg-base-100">
                 <div class="navbar-start">
@@ -68,7 +69,7 @@
                             <li><a>Contact</a></li>
                         </ul>
                     </div>
-                    <a class="btn btn-ghost text-4xl">Hockey<span class="text-hockey-primary">’</span>s</a>
+                    <a class="text-4xl font-extrabold ">Hockey<span class="text-hockey-primary">’</span>s</a>
                 </div>
                 <div class="navbar-center hidden lg:flex">
                     <ul class="menu menu-horizontal px-1 text-base">
@@ -80,11 +81,43 @@
                     </ul>
                 </div>
                 <div class="navbar-end gap-6">
-                    <i class="fa-solid fa-magnifying-glass hidden lg:block"></i>
-                    <a class="btn text-xl text-white bg-hockey-primary px-6 ">Get Ticket</a>
+                    <a href=""><i class="fa-solid fa-magnifying-glass hidden lg:block"></i></a>
+                    <a class="btn text-xl text-white bg-hockey-primary px-6 font-bold	">Get Ticket</a>
                 </div>
             </div>
         </nav>
+        <!-- Slider -->
+
+        <div class="carousel w-full mt-14 ">
+            <div id="slide1" class="carousel-item relative w-full">
+                <img src="Images/1.png" class="w-full" />
+                <div class="absolute flex gap-4 transform -translate-y-1/2 left-8  bottom-8">
+                    <a href="#slide4" class="btn btn-circle bg-black text-white">❮</a>
+                    <a href="#slide2" class="btn btn-circle bg-black text-white">❯</a>
+                </div>
+            </div>
+            <div id="slide2" class="carousel-item relative w-full">
+                <img src="Images/2.png" class="w-full" />
+                <div class="absolute flex gap-4 transform -translate-y-1/2 left-8  bottom-8">
+                    <a href="#slide1" class="btn btn-circle  bg-black text-white">❮</a>
+                    <a href="#slide3" class="btn btn-circle  bg-black text-white">❯</a>
+                </div>
+            </div>
+            <div id="slide3" class="carousel-item relative w-full">
+                <img src="Images/3.png" class="w-full" />
+                <div class="absolute flex gap-4 transform -translate-y-1/2 left-8  bottom-8">
+                    <a href="#slide2" class="btn btn-circle  bg-black text-white">❮</a>
+                    <a href="#slide4" class="btn btn-circle  bg-black text-white">❯</a>
+                </div>
+            </div>
+            <div id="slide4" class="carousel-item relative w-full">
+                <img src="Images/4.png" class="w-full" />
+                <div class="absolute flex gap-4 transform -translate-y-1/2 left-8  bottom-8">
+                    <a href="#slide3" class="btn btn-circle  bg-black text-white">❮</a>
+                    <a href="#slide1" class="btn btn-circle  bg-black text-white ">❯</a>
+                </div>
+            </div>
+        </div>
 
     </header>
     <main>
